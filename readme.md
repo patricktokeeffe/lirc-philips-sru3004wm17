@@ -24,14 +24,14 @@ profile button: <kbd>VCR</kbd> or <kbd>SAT</kbd>.
 3. Type in the code for MCE: <kbd>1</kbd><kbd>6</kbd><kbd>1</kbd><kbd>1</kbd>;
    the red light should blink after each digit then turn off.
 
-Next, install the provided configuration file into `/etc/lirc`:
+Next, install the provided configuration file and image into `/etc/lirc`:
 ```
-# sudo cp philips-sru3004wm17.conf /etc/lirc/
+# cp ph* /etc/lirc/
 ```
 
-At this point, you should probably use your system's graphical interface to
-enable this keymap:
+To actually enable the keymap, you should probably use your system's
+graphical interface.
 
-* For Kodi/OSMC, try navigating into `My OSMC > Remotes'
+* For Kodi/OSMC, try navigating into `My OSMC > Remotes`
 * To enable it manually, copy the conf file as `/etc/lirc/lircd.conf`
 
