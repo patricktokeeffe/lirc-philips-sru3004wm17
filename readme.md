@@ -2,36 +2,46 @@
 
 ## Philips universal remote (SRU3004MW/17)
 
-A `.conf` file for [lirc](http://lirc.org) for an old universal remote:
+An [LIRC](http://lirc.org) `.conf` file for my old universal remote,
+optimized for use with [Kodi](https://kodi.tv).
 
 ![Photo of remote](philips-sru3004wm17.jpg)
 
 
-### Requirements
+### Setup
 
-You should have a working instance of LIRC, receiver. etc. Please refer to
-one of the several guides elsewhere online.
+LIRC is included with Kodi by default. 
 
 
-### Usage
+#### Prepare Raspberry Pi
 
-First, configure the remote to send MCE signal codes. You can use either
-profile button: <kbd>VCR</kbd> or <kbd>SAT</kbd>.
+* Add an [IR receiver](http://kodi.wiki/view/Raspberry_Pi#Remote_controls)
+* Navigate to `My OSMC > Pi Config > Hardware Support` and verify
+    * 'Enable LIRC GPIO support': enabled
+    * 'gpio_in_pin': 18
+
+#### Configure the remote
+
+First, configure the remote to send MCE signal codes.
 
 1. Press and hold <kbd>SETUP</kbd> until the red light remains lit.
 2. Press the desired profile button (<kbd>VCR</kbd> or <kbd>SAT</kbd>);
    the red light should blink once.
 3. Type in the code for MCE: <kbd>1</kbd><kbd>6</kbd><kbd>1</kbd><kbd>1</kbd>;
-   the red light should blink after each digit then turn off.
+   the red light should blink after each digit, then turn off.
 
-Next, install the provided configuration file and image into `/etc/lirc`:
+#### Add to LIRC
+
+Clone this repository to the local file system, then copy relevant files
+into `/etc/lirc`:
 ```
-# cp ph* /etc/lirc/
+# git clone https://github.com/patricktokeeffe/lirc-philips-sru3004wm17.git
+# cd lirc-philips-sru3004wm17
+# sudo cp ph* /etc/lirc/
 ```
 
-To actually enable the keymap, you should probably use your system's
-graphical interface.
+#### Enable keymap
 
-* For Kodi/OSMC, try navigating into `My OSMC > Remotes`
+* For Kodi/OSMC, choose `My OSMC > Remotes > philips-sru3004wm17`
 * To enable it manually, copy the conf file as `/etc/lirc/lircd.conf`
 
