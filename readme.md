@@ -4,7 +4,7 @@
 
 A `.conf` file for [lirc](http://lirc.org) for an old universal remote:
 
-![Photo of remote](philips-sru3004mw17.jpg)
+![Photo of remote](philips-sru3004wm17.jpg)
 
 
 ### Requirements
