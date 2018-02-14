@@ -20,6 +20,13 @@ LIRC is included with Kodi by default.
     * 'Enable LIRC GPIO support': enabled
     * 'gpio_in_pin': 18
 
+One convenient way to connect the receiver diode to the Pi is a stereo cable
+and matching jack. Cut one end off the stereo cable for the receiver and
+attach female header wires to the jack:
+
+![IR receiver wiring](receiver_wiring.png)
+
+
 #### Configure the remote
 
 First, configure the remote to send MCE signal codes.
