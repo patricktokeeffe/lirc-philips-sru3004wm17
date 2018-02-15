@@ -5,7 +5,7 @@
 An [LIRC](http://lirc.org) `.conf` file for my old universal remote,
 optimized for use with [Kodi](https://kodi.tv).
 
-![Photo of remote](philips-sru3004wm17.jpg)
+![Photo of remote](philips-sru3004wm17.png)
 
 
 ### Setup
